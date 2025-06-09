@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333333;
+  font-size: 15px;
+  font-weight: 400;
+}
+.header {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pchome-logo {
+  height: 45px;
+}
+.header-link {
+  font-size: 13px;
+  color: #888;
+  text-decoration: none;
+}
+.header-link:hover {
+  color: #0074cc;
+}
+.wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 原本是 center，改成靠上對齊 */
+  padding-top: 10px;       /* 向上推一點 */
+}
+.login-box {
+  max-width: 320px;  /* 原本是 360px */
+  margin: 40px auto; /* 加這行讓它垂直置中且有 margin */
+  padding: 36px 28px;
+  border-radius: 12px;
+  background: #fff;
+  text-align: center; /* ✅讓內部文字預設都置中 */
+  box-shadow: none;
+}
+.login-box h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 12px;
+}
+.login-box p {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  color: #1e1e1e;
+  margin: 16px 0;
+  line-height: 1.8;
+}
+.login-box a {
+  display: inline-block;
+  color: #00a2e9;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 12px 0 18px;
+  box-sizing: border-box;
+}
+.remember-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0 24px;
+  font-size: 15px;
+}
+.login-btn {
+  width: 100%;
+  background-color: #d00;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.login-btn:hover {
+  background-color: #a00;
+}
+.disclaimer {
+  font-size: 13px;
+  color: #666;
+  margin-top: 24px;   /* 原本 18px → 加強段落感 */
+  line-height: 1.7;
+}
+.divider {
+  border-top: 1px solid #ccc;
+  margin: 24px 0 10px;
+}
+.social-label {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+.login-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* 原本是 30px，改大一點 */
+  margin-top: 24px;
+}
+.login-icons .icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  transition: transform 0.2s;
+  box-shadow: none;
+}
+.login-icons .icon-wrapper:hover {
+  transform: scale(1.05);
+}
+.login-icons .icon-wrapper img {
+  width: 30px;
+  height: 30px;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px 0;
+}
+.social-icons img {
+  width: 36px;
+  height: 36px;
+}
+.other-login-text {
+  text-align: center;
+  color: #00a2e9;
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 24px;
+}
+.footer {
+  background-color: #fff;
+  padding: 20px;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.footer a {
+  color: #00a2e9;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer .gray {
+  color: #888;
+}
+body, html {
+  height: 100%;
+  overflow: hidden; /* 防止滾動 */
+}
+.terms-text,
+.alt-login-title,
+.alt-login-bottom {
+  text-align: center;
+}
+.alt-login-title {
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 16px;
+  position: relative;
+}
+.alt-login-title::before,
+.alt-login-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  height: 1px;
+  background-color: #ccc;
+}
+.alt-login-title::before {
+  left: -110px;
+}
+.alt-login-title::after {
+  right: -110px;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 12px 40px 12px 12px; /* 為眼睛留空間 */
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 12px 0 18px;
+  box-sizing: border-box;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.toggle-password:hover {
+  opacity: 1;
+}
+
