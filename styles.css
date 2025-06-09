@@ -173,10 +173,7 @@ input[type="text"] {
 .footer .gray {
   color: #888;
 }
-body, html {
-  height: 100%;
-  overflow: hidden; /* 防止滾動 */
-}
+
 .terms-text,
 .alt-login-title,
 .alt-login-bottom {

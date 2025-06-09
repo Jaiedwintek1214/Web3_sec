@@ -10,47 +10,74 @@
 <header class="header">
   <div class="header-inner">
     <img src="images/pchome%20logo.webp" alt="PChome 24h Logo" class="pchome-logo" />
-    <a href="#" class="header-link">回PChome 24h購物首頁</a>
+    <a href="https://24h.pchome.com.tw/" class="header-link" target="_blank">回PChome 24h購物首頁</a>
   </div>
 </header>
 
 <div class="wrapper">
-  <div class="login-box">
+  <!-- 第一步：輸入帳號 -->
+  <div id="step1" class="login-box">
     <h2>歡迎登入</h2>
-    <p>沒有 PChome 24h 購物帳號嗎？<a href="#">立即註冊</a></p>
-
-    <form id="loginForm">
-      <input type="text" id="account" placeholder="請輸入手機號碼 或 Email" required />
-
-      <div class="password-wrapper">
-        <input type="password" id="password" placeholder="請輸入密碼" required />
-        <img src="images/eye-closed.svg" class="toggle-password" onclick="togglePasswordVisibility()" />
-      </div>
-
-
-      <div class="remember-line">
-        <label><input type="checkbox" id="remember"> 記住帳號</label>
-        <a href="#">忘記密碼</a>
-      </div>
-      <button type="submit" class="login-btn">登入</button>
-    </form>
-
+    <p>沒有 PChome 24h 購物帳號嗎？<a href="#" onclick="showRegister()">立即註冊</a></p>
+    <input type="text" id="account" placeholder="請輸入手機號碼 或 Email" required />
+    <div class="remember-line">
+      <label><input type="checkbox" id="remember"> 記住帳號</label>
+      <a href="#" onclick="showForgot()">忘記密碼</a>
+    </div>
+    <button id="continueBtn" class="login-btn">繼續</button>
     <p class="disclaimer">
       登入帳號，即表示您已閱讀並同意 PChome 之
       <a href="#">會員條款</a> 與 <a href="#">客戶隱私權條款</a>
     </p>
-
     <div class="divider"></div>
     <p class="social-label">使用以下帳號快速登入</p>
     <div class="login-icons">
-      <div class="icon-wrapper"><img src="images/fb.svg" alt="Facebook"></div>
-      <div class="icon-wrapper"><img src="images/google.svg" alt="Google"></div>
-      <div class="icon-wrapper"><img src="images/apple.svg" alt="Apple"></div>
+      <a href="https://www.facebook.com/login" target="_blank" class="icon-wrapper">
+        <img src="images/fb.svg" alt="Facebook">
+      </a>
+      <a href="https://accounts.google.com/signin" target="_blank" class="icon-wrapper">
+        <img src="images/google.svg" alt="Google">
+      </a>
+      <a href="https://appleid.apple.com/" target="_blank" class="icon-wrapper">
+        <img src="images/apple.svg" alt="Apple">
+      </a>
     </div>
+    <div class="other-login-text"><a href="#">使用其他 PChome 帳號登入</a></div>
+  </div>
 
-    <div class="other-login-text">
-      <a href="#">使用其他 PChome 帳號登入</a>
+  <!-- 第二步：輸入密碼 -->
+  <div id="step2" class="login-box" style="display:none;">
+    <h2>請輸入您的密碼</h2>
+    <p>請輸入與 <span id="maskedAccount">您的帳號</span> 連結的 PChome 24h 購物帳號密碼。</p>
+    <div class="password-wrapper">
+      <input type="password" id="password" placeholder="請輸入密碼" required />
+      <img src="images/eye-closed.svg" class="toggle-password" onclick="togglePasswordVisibility()" />
     </div>
+    <button id="loginBtn" class="login-btn">登入</button>
+    <a href="#" onclick="showForgot()">忘記密碼</a>
+  </div>
+
+  <!-- 第三步：註冊 -->
+  <div id="registerBox" class="login-box" style="display: none;">
+    <h2>立即註冊</h2>
+    <p>已經擁有帳號嗎？<a href="#" onclick="showLogin()">立即登入</a></p>
+    <input type="text" id="regPhone" placeholder="請輸入手機號碼" />
+    <div class="password-wrapper">
+      <input type="password" id="regPassword" placeholder="請輸入密碼" />
+      <img src="images/eye-closed.svg" class="toggle-password" onclick="toggleRegPw('regPassword', this)" />
+    </div>
+    <div class="password-wrapper">
+      <input type="password" id="regConfirm" placeholder="確認密碼" />
+      <img src="images/eye-closed.svg" class="toggle-password" onclick="toggleRegPw('regConfirm', this)" />
+    </div>
+    <button id="registerBtn" class="login-btn">註冊</button>
+  </div>
+
+  <div id="forgotBox" class="login-box" style="display: none;">
+    <h2>忘記密碼</h2>
+    <p>別擔心！讓我們協助您重新設定</p>
+    <input type="text" id="forgotAccount" placeholder="請輸入手機號碼 或 Email" />
+    <button id="forgotBtn" class="login-btn">送出</button>
   </div>
 </div>
 
